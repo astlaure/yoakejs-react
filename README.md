@@ -46,3 +46,13 @@
 ### Event Emitter
 
 1. Event Emitter 3
+
+### SSR
+
+1. Express
+
+
+## SSR
+
+1. Reuse the index.html ?
+2. Will this let me set lang value and meta and stuff
