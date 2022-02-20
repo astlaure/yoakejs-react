@@ -4,7 +4,7 @@ import AuthContextReducer from './AuthContextReducer';
 import useHttpClient from '../../core/hooks/useHttpClient';
 
 export interface Props {
-  children: React.ReactElement;
+  children: React.ReactElement | React.ReactElement[];
 }
 
 function AuthContextProvider(props: Props): React.ReactElement {
