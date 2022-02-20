@@ -1,0 +1,23 @@
+.form {
+  width: 100%;
+
+  .input {
+    margin-bottom: 1rem;
+    display: block;
+
+    input, select, textarea {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .inline-input {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+
+    input {
+      margin-right: 1rem;
+    }
+  }
+}
