@@ -2,20 +2,20 @@ import express from 'express';
 import React from 'react';
 import { StaticRouter } from 'react-router-dom/server';
 import ReactDOMServer from 'react-dom/server';
-import App from './App';
-import Layout from './core/ssr/Layout';
+import IndexHtml from 'server/IndexHtml';
+import App from 'src/App';
 
 const app = express();
 
 app.use(express.static('public', { index: false }));
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
   const jsx = (
-    <Layout>
+    <IndexHtml>
       <StaticRouter location={req.url}>
         <App />
       </StaticRouter>
-    </Layout>
+    </IndexHtml>
   );
   res.send(`<!DOCTYPE html>${ReactDOMServer.renderToString(jsx)}`);
 });

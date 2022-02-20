@@ -4,7 +4,7 @@ export interface Props {
   children: React.ReactElement;
 }
 
-function Layout(props: Props): React.ReactElement {
+function IndexHtml(props: Props): React.ReactElement {
   const { children } = props;
   return (
     <html lang="en">
@@ -21,15 +21,15 @@ function Layout(props: Props): React.ReactElement {
           rel="stylesheet"
         />
         <link rel="stylesheet" href="css/app.css" />
-        <script src="js/app.js" />
       </head>
       <body>
 
         <div id="root">{children}</div>
 
+        <script src="js/app.js" />
       </body>
     </html>
   );
 }
 
-export default Layout;
+export default IndexHtml;
